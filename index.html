@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspiredRecord's House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="sidebar" id="leftSidebar">
+        <h1 class="glow">InspiredRecord's House</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="discord.html">Discord</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h2 class="fade-in">Welcome to InspiredRecord's House</h2>
+            <p class="fade-in">This is the home of InspiredRecord, where you can find all my projects. Feel free to explore and join our Discord community!</p>
+            <button class="cta-button fade-in"><a href="projects.html">Check Out My Projects</a></button>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.fade-in').forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                element.style.transition = 'opacity 0.8s, transform 0.8s';
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            }, 200);
+        });
+    </script>
+</body>
+</html>
